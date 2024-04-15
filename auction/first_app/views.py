@@ -19,7 +19,7 @@ class CarViewSet(viewsets.ModelViewSet):
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_fields = ['category', "year", "country"]
     search_fields = ['marka']
-    ordering_fields = ['price']
+    ordering_fields = ['price', "year"]
 
 class BetViewSet(viewsets.ModelViewSet):
     queryset = Bet.objects.all()
