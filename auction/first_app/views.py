@@ -18,7 +18,7 @@ class CarViewSet(viewsets.ModelViewSet):
     pagination_class = Pagination
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_fields = ['category', "year", "country"]
-    search_fields = ['marka']
+    search_fields = ['marka', 'model']
     ordering_fields = ['price', "year"]
 
 class BetViewSet(viewsets.ModelViewSet):
